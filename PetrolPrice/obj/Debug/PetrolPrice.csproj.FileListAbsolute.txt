@@ -1,0 +1,10 @@
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\PetrolPrice.exe.config
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\PetrolPrice.exe
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\PetrolPrice.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Debug\PetrolPrice.csprojAssemblyReference.cache
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Debug\PetrolPrice.exe
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Debug\PetrolPrice.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Debug\PetrolPrice.csproj.CopyComplete
