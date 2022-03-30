@@ -1,10 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PetrolPrice
 {
@@ -12,17 +9,50 @@ namespace PetrolPrice
     {
         static void Main(string[] args)
         {
-            GetHtmlAsync();
-            Console.ReadLine();
+            for (var trying = 0; trying < 1;) {
+                string[,] opcje = new string[,] { { "pl", " - Poland" }, { "nl", " - Netherlands" }, { "gb", " - United Kingdom" }, { "de", " - Germany" }, { "end", " - Close the aplication" } };
+                Console.WriteLine("Choose the country from which you want information:");
+                for (var i = 0; i < opcje.GetLength(0); i++)
+                {
+                    Console.WriteLine("     " + opcje[i, 0] + opcje[i, 1]);
+                }
+                Console.WriteLine();
+                Console.Write("You are choosing: ");
+                string country = Console.ReadLine();
+                var fails = 0;
+                for (int i = 0; i < opcje.GetLength(0); i++)
+                {
+                    if(country == opcje[opcje.GetLength(0)-1, 0])
+                    {
+                        trying++;
+                        break;
+                    }
+                    if (opcje[i, 0] == country)
+                    {
+                        GetHtmlAsync(country);
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        fails++;
+                    }
+                    if (fails >= opcje.GetLength(0))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("You entered the wrong country");
+                        Console.WriteLine();
+                    }
+                }
+            }
         }
 
-        private static async void GetHtmlAsync()
+        private static async void GetHtmlAsync(string country)
         {
             var Year = DateTime.Now.Year;
             var Month = DateTime.Now.Month;
             var Day = DateTime.Now.Day;
 
-            var url = $"https://pl.fuelo.net/prices/date/{Year}-{Month}-{Day}?lang=en";
+            var url = $"https://{country}.fuelo.net/prices/date/{Year}-{Month}-{Day}?lang=en";
 
             var httpClient = new HttpClient();
             var html = await httpClient.GetStringAsync(url);
@@ -38,12 +68,16 @@ namespace PetrolPrice
             var PetrolPriceList = PetrolsHtml[0].Descendants("thead").ToList()[0].Descendants("tr").ToList()[1].Descendants("th").ToList();
 
             char[] separators = new char[] {' '};
-            string[] PetrolTypes = new String[] {"", "A95: ", "Diesel: ", "LPG: ", "CNG: ", "A98: ", "Diesel+: ", "A98+: " };
+            var PetrolTypes = PetrolsHtml[0].Descendants("thead").ToList()[0].Descendants("tr").ToList()[0].Descendants("th").ToList();
 
-            for (var i = 1; i > 0 && i<8; i++)
+
+            Console.WriteLine("");
+            Console.WriteLine($"Average fuels prices for {country}:");
+            for (var i = 1; i > 0 && i<PetrolPriceList.Count; i++)
             {
-                Console.WriteLine(PetrolTypes[i] + PetrolPriceList[i].InnerText.Split(separators, StringSplitOptions.RemoveEmptyEntries)[1]);
+                Console.WriteLine("     " + PetrolTypes[i].InnerText.TrimEnd() + ": " + PetrolPriceList[i].InnerText.Split(separators, StringSplitOptions.RemoveEmptyEntries)[1]);
             }
+            Console.WriteLine();
         }
     }
 }
