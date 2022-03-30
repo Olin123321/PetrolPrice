@@ -1,0 +1,11 @@
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\PetrolPrice.exe.config
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\PetrolPrice.exe
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\PetrolPrice.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\HtmlAgilityPack.dll
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\HtmlAgilityPack.xml
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Release\PetrolPrice.csproj.CopyComplete
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Release\PetrolPrice.exe
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\obj\Release\PetrolPrice.pdb
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\PetrolPrice.exe.CodeAnalysisLog.xml
+C:\Users\Bartek\Documents\GitHub\PetrolPrice\PetrolPrice\bin\Release\PetrolPrice.exe.lastcodeanalysissucceeded
